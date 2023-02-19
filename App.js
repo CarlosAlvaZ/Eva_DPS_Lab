@@ -5,6 +5,7 @@ import Search from './components/Search';
 import Movie from './components/Movie';
 import cuervo from './sources/cuervo.png'
 import FilteredList from './components/FilteredList';
+import BottomRouting from './components/BottomRouting';
 
 export default function App() {
   const [movies, setMovies] = useState([])
@@ -46,6 +47,55 @@ export default function App() {
           "clasificacion": "Terror",
           "duracion": "114 min",
           "formato": "(HD, 3D, BlueRay)"
+      },
+      {
+        "nombre": "Gato con botas: el último deseo",
+        "imagen": "https://www.dreamworks.com/storage/cms-uploads/puss-in-boots-the-last-wish-poster-thumbnail2.jpg",
+        "clasificacion": "Aventura",
+        "duracion": "100 min",
+        "formato": "(HD, 3D)"
+      },
+      {
+        "nombre": "Megan (M3gan)",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRlPuvFooEgY3ujYiYECYn5pxe1bBMwwNmWFh5iFIh&usqp=CAE&s",
+        "clasificacion": "Terror",
+        "duracion": "102 min",
+        "formato": "(HD, BlueRay)"
+      },
+      {
+        "nombre": "La ballena",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Y8BqSDlZtVC5LRUHuZdV5Ph_1SDzQq7oknC_w7BYaM8mkod8",
+        "clasificacion": "Drama",
+        "duracion": "117 min",
+        "formato": "(HD)"
+      },
+      {
+        "nombre": "Interestellar",
+        "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQMHMl9U1z1txXWCBgKbSlwH0tV3wVIsxyd6CQLhR0CkgC8Nagf",
+        "clasificacion": "Aventura",
+        "duracion": "169 min",
+        "formato": "(HD, BlueRay)"
+      },
+      {
+        "nombre": "El señor de los anillos",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUrYu5XxAifo5b7XV5wVnd7zGFjYJP9V39b6vbChQue04j4b7-",
+        "clasificacion": "Fantasía",
+        "duracion": "178 min",
+        "formato": "(HD)"
+      },
+      {
+        "nombre": "El Hobbit",
+        "imagen": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ31YN0XkB7sqN8kM12ERv6vS6TY_SAGHb8lzGjJVUumqBOLcBW",
+        "clasificacion": "Fantasía",
+        "duracion": "169 min",
+        "formato": "(HD)"
+      },
+      {
+        "nombre": "The VelociPastor",
+        "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP--PsgjGzVCv5hqb76-7ECtGBHmCiX9J_qiVZ2hyEVnv3VocO",
+        "clasificacion": "Accion",
+        "duracion": "75 min",
+        "formato": "(HD)"
       }
     ])
   }, [])
@@ -81,9 +131,8 @@ export default function App() {
             filter && <FilteredList movies={movies} filter={filter}/>
           }
         </View>
-
-
       </ScrollView>
+      <BottomRouting />
     </SafeAreaView>
   );
 }
@@ -92,7 +141,7 @@ const styles = StyleSheet.create({
   scrollView : {
     position : 'relative',
     width : '100%',
-    height : '100%',
+    height : '90%',
     backgroundColor : '#151718'
   },
   header : {
